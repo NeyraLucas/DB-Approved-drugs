@@ -5,7 +5,10 @@ import { ListOfDrugsComponent } from './pages/list-of-drugs/list-of-drugs.compon
 const routes: Routes = [
   {
     path: '',
-    children: [{ path: 'list', component: ListOfDrugsComponent }],
+    children: [
+      { path: 'list', component: ListOfDrugsComponent },
+      { path: '**', redirectTo: 'list' },
+    ],
   },
 ];
 
